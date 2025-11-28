@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Portfolio | Graduate Research Assistant</title>
+    <meta name="description" content="Portfolio of a Graduate Research Assistant pursuing Master's by Research - showcasing research projects, skills, and academic journey">
+    <meta property="og:title" content="Research Portfolio | Graduate Research Assistant">
+    <meta property="og:description" content="Exploring the intersection of research and innovation">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'display': ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        primary: '#2D3748',
+                        secondary: '#4A5568',
+                        accent: '#667EEA',
+                        accent2: '#764BA2',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+            margin-top: 12px;
+            border-radius: 2px;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        .skill-bar {
+            transition: width 1.5s ease-out;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="#home" class="text-2xl font-display font-bold gradient-text">Research Portfolio</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-accent transition-colors">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-accent transition-colors">About</a>
+                    <a href="#projects" class="nav-link text-gray-700 hover:text-accent transition-colors">Projects</a>
+                    <a href="#skills" class="nav-link text-gray-700 hover:text-accent transition-colors">Skills</a>
+                    <a href="#experience" class="nav-link text-gray-700 hover:text-accent transition-colors">Experience</a>
+                    <a href="#education" class="nav-link text-gray-700 hover:text-accent transition-colors">Education</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-accent transition-colors">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-accent focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">About</a>
+                <a href="#projects" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Projects</a>
+                <a href="#skills" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Skills</a>
+                <a href="#experience" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Experience</a>
+                <a href="#education" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Education</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 opacity-70"></div>
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%239C92AC\' fill-opacity=\'0.05\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="animate-fade-in-up">
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-display font-bold text-gray-900 mb-6">
+                    Hello, I'm <span class="gradient-text">Md Reyad Hossain</span>
+                </h1>
+                <p class="text-xl sm:text-2xl text-gray-600 mb-4 max-w-3xl mx-auto">
+                    Graduate Research Assistant | Master's by Research Candidate
+                </p>
+                <p class="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
+                    Exploring the frontiers of research and innovation
+                </p>
+                
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <a href="#projects" class="gradient-bg text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                        View My Work
+                    </a>
+                    <a href="#contact" class="bg-white text-accent border-2 border-accent px-8 py-3 rounded-full font-semibold hover:bg-accent hover:text-white transition-all duration-300">
+                        Get in Touch
+                    </a>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="flex justify-center space-x-6">
+                    <a href="https://www.instagram.com/reyad_hu_ssain" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-accent transition-colors text-2xl" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/reyad-hossain-9667a8264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-gray-600 hover:text-accent transition-colors text-2xl" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/reyadhossainCSE" class="text-gray-600 hover:text-accent transition-colors text-2xl" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-accent transition-colors text-2xl" aria-label="ResearchGate">
+                        <i class="fab fa-researchgate"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-accent transition-colors text-2xl" aria-label="Google Scholar">
+                        <i class="fas fa-graduation-cap"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <a href="#about" class="text-gray-400 hover:text-accent transition-colors">
+                    <i class="fas fa-chevron-down text-3xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-display font-bold text-gray-900 mb-4 section-title">About Me</h2>
+                    <div class="space-y-4 text-gray-600 leading-relaxed">
+                        <p>
+                            I am a dedicated Graduate Research Assistant currently pursuing my Master's by Research, 
+                            driven by a passion for advancing knowledge and contributing to meaningful discoveries 
+                            in my field.
+                        </p>
+                        <p>
+                            My research journey combines rigorous academic inquiry with practical problem-solving, 
+                            allowing me to bridge the gap between theoretical concepts and real-world applications. 
+                            Through my work, I strive to push boundaries and explore innovative solutions to complex challenges.
+                        </p>
+                        <p>
+                            As a researcher, I believe in the power of collaboration, continuous learning, and 
+                            maintaining intellectual curiosity. I'm always eager to engage with new ideas and 
+                            contribute to the broader academic community.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="#cv-upload" class="inline-flex items-center gradient-bg text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                            <i class="fas fa-file-download mr-2"></i>
+                            Download CV
+                        </a>
+                        <a href="#contact" class="inline-flex items-center bg-gray-100 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-all duration-300">
+                            <i class="fas fa-envelope mr-2"></i>
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="relative z-10">
+                        <img src="https://postimg.cc/KRCt4YmW" 
+                             alt="Profile" 
+                             class="rounded-2xl shadow-2xl w-full object-cover"
+                             style="max-height: 600px;">
+                        <div class="absolute -bottom-6 -right-6 w-48 h-48 gradient-bg rounded-2xl -z-10"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-display font-bold text-gray-900 mb-4 inline-block section-title">Research Projects</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mt-8">
+                    Explore my research endeavors and academic contributions
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&h=400&fit=crop" 
+                             alt="Research Project 1" 
+                             class="w-full h-full object-cover opacity-80">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-accent/10 text-accent text-xs font-semibold px-3 py-1 rounded-full">Master's Research</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Smoke detection using Arduino</h3>
+                        <p class="text-gray-600 mb-4">
+                            Description :
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Methodology</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Analysis</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Research</span>
+                        </div>
+                        <a href="#" class="text-accent font-semibold hover:underline inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-500 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" 
+                             alt="Research Project 2" 
+                             class="w-full h-full object-cover opacity-80">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-purple-100 text-purple-600 text-xs font-semibold px-3 py-1 rounded-full">Data Analysis</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Blood donation system Project</h3>
+                        <p class="text-gray-600 mb-4">
+                            Additional 
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Statistics</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Visualization</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Python</span>
+                        </div>
+                        <a href="#" class="text-accent font-semibold hover:underline inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop" 
+                             alt="Research Project 3" 
+                             class="w-full h-full object-cover opacity-80">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-green-100 text-green-600 text-xs font-semibold px-3 py-1 rounded-full">Literature Review</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">News article share prediction</h3>
+                        <p class="text-gray-600 mb-4">
+                            Comprehensive
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Review</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Synthesis</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Critical Analysis</span>
+                        </div>
+                        <a href="#" class="text-accent font-semibold hover:underline inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-display font-bold text-gray-900 mb-4 inline-block section-title">Skills & Expertise</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mt-8">
+                    Technical and research competencies developed through academic pursuit
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Research Skills -->
+                <div class="bg-gray-50 rounded-xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-microscope text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Research Skills</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-700">Research Methodology</span>
+                                <span class="text-gray-600">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar gradient-bg h-3 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-700">Data Analysis</span>
+                                <span class="text-gray-600">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar gradient-bg h-3 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-700">Literature Review</span>
+                                <span class="text-gray-600">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar gradient-bg h-3 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-700">Academic Writing</span>
+                                <span class="text-gray-600">88%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar gradient-bg h-3 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Technical Skills -->
+                <div class="bg-gray-50 rounded-xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-code text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Technical Skills</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-700">Statistical Analysis (SPSS/R)</span>
+                                <span class="text-gray-600">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar gradient-bg h-3 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-700">Python/Data Science</span>
+                                <span class="text-gray-600">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar gradient-bg h-3 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-700">LaTeX/Academic Tools</span>
+                                <span class="text-gray-600">82%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar gradient-bg h-3 rounded-full" style="width: 82%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-700">Reference Management</span>
+                                <span class="text-gray-600">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar gradient-bg h-3 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Skills -->
+            <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
+                    <i class="fas fa-chart-line text-4xl text-accent mb-3"></i>
+                    <h4 class="font-semibold text-gray-900">Data Visualization</h4>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
+                    <i class="fas fa-users text-4xl text-accent mb-3"></i>
+                    <h4 class="font-semibold text-gray-900">Collaboration</h4>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
+                    <i class="fas fa-presentation text-4xl text-accent mb-3"></i>
+                    <h4 class="font-semibold text-gray-900">Presentations</h4>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
+                    <i class="fas fa-book-open text-4xl text-accent mb-3"></i>
+                    <h4 class="font-semibold text-gray-900">Critical Thinking</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-display font-bold text-gray-900 mb-4 inline-block section-title">Experience</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mt-8">
+                    My academic and professional journey
+                </p>
+            </div>
+            
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-accent to-accent2"></div>
+                
+                <!-- Experience Item 1 -->
+                <div class="mb-12 flex flex-col md:flex-row items-center">
+                    <div class="w-full md:w-5/12 md:text-right md:pr-12">
+                        <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Graduate Research Assistant</h3>
+                            <p class="text-accent font-semibold mb-2">University Tunku Abdur Rahman Malaysia</p>
+                            <p class="text-gray-600 text-sm mb-3">Present</p>
+                            <p class="text-gray-700">
+                                Conducting research for Master's by Research program, assisting with laboratory work, 
+                                data collection and analysis, literature reviews, and contributing to academic publications.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-4 justify-end">
+                                <span class="bg-accent/10 text-accent text-xs px-2 py-1 rounded">Research</span>
+                                <span class="bg-accent/10 text-accent text-xs px-2 py-1 rounded">Data Analysis</span>
+                                <span class="bg-accent/10 text-accent text-xs px-2 py-1 rounded">Academic Writing</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hidden md:flex w-2/12 justify-center my-4 md:my-0">
+                        <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center z-10 shadow-lg">
+                            <i class="fas fa-briefcase text-white"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full md:w-5/12"></div>
+                </div>
+                
+                <!-- Experience Item 2 -->
+                <div class="mb-12 flex flex-col md:flex-row items-center">
+                    <div class="w-full md:w-5/12"></div>
+                    
+                    <div class="hidden md:flex w-2/12 justify-center my-4 md:my-0">
+                        <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center z-10 shadow-lg">
+                            <i class="fas fa-flask text-white"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full md:w-5/12 md:pl-12">
+                        <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Research Assistant</h3>
+                            <p class="text-accent font-semibold mb-2">IIUC</p>
+                            <p class="text-gray-600 text-sm mb-3">2022 -2024</p>
+                            <p class="text-gray-700">
+                                Gained hands-on research experience through Research Assistant position, learned research methodologies, 
+                               and experiment, and contributed to research projects.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="bg-accent/10 text-accent text-xs px-2 py-1 rounded">Lab Work</span>
+                                <span class="bg-accent/10 text-accent text-xs px-2 py-1 rounded">Experimentation</span>
+                                <span class="bg-accent/10 text-accent text-xs px-2 py-1 rounded">Documentation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience Item 3 -->
+                <div class="mb-12 flex flex-col md:flex-row items-center">
+                    <div class="w-full md:w-5/12 md:text-right md:pr-12">
+                        <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Teaching Assistant</h3>
+                            <p class="text-accent font-semibold mb-2">International Islamic University Chittagong</p>
+                            <p class="text-gray-600 text-sm mb-3">1 Jan 2023 - 15 June 2023</p>
+                            <p class="text-gray-700">
+                                Assisted professors with undergraduate courses, conducted tutorial sessions, 
+                                graded assignments, and provided academic support to students.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-4 justify-end">
+                                <span class="bg-accent/10 text-accent text-xs px-2 py-1 rounded">Teaching</span>
+                                <span class="bg-accent/10 text-accent text-xs px-2 py-1 rounded">Mentoring</span>
+                                <span class="bg-accent/10 text-accent text-xs px-2 py-1 rounded">Assessment</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hidden md:flex w-2/12 justify-center my-4 md:my-0">
+                        <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center z-10 shadow-lg">
+                            <i class="fas fa-chalkboard-teacher text-white"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full md:w-5/12"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-display font-bold text-gray-900 mb-4 inline-block section-title">Education</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mt-8">
+                    Academic qualifications and achievements
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Master's Degree -->
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl shadow-lg card-hover border-2 border-accent/20">
+                    <div class="flex items-start mb-4">
+                        <div class="w-16 h-16 gradient-bg rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-user-graduate text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-1">Master's by Research</h3>
+                            <p class="text-accent font-semibold">University Tunku Abdur Rahman Malaysia</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-3">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        Expected Completion: 2027
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        Research Focus: ML based species distribution modelling in response to bioclimatic changes for predicting occurance of mountain peacock and malayan partridge.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white text-accent text-xs font-semibold px-3 py-1 rounded-full">Research</span>
+                        <span class="bg-white text-accent text-xs font-semibold px-3 py-1 rounded-full">Thesis</span>
+                        <span class="bg-white text-accent text-xs font-semibold px-3 py-1 rounded-full">Publication</span>
+                    </div>
+                </div>
+                
+                <!-- Bachelor's Degree -->
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl shadow-lg card-hover border-2 border-purple-200">
+                    <div class="flex items-start mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-1">Bachelor's Degree</h3>
+                            <p class="text-purple-600 font-semibold">International Islamic University Chittagong</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-3">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        Graduated: 2023
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        Major: Computer Science and Engineering. Developed strong foundation in Machine learning , AI,Data Science,NLP 
+                        completed project on Smoke detection using Arduino, Blood donation system Project, News article share prediction and maintained excellent academic standing.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white text-purple-600 text-xs font-semibold px-3 py-1 rounded-full">GPA: 3.5 out of 4</span>
+                        <span class="bg-white text-purple-600 text-xs font-semibold px-3 py-1 rounded-full">Honors</span>
+                        <span class="bg-white text-purple-600 text-xs font-semibold px-3 py-1 rounded-full">Dean's List</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Certifications & Awards -->
+            <div class="mt-16 max-w-5xl mx-auto">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Certifications & Awards</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-shadow">
+                        <i class="fas fa-award text-4xl text-accent mb-3"></i>
+                        <h4 class="font-semibold text-gray-900 mb-2">Research Excellence Award</h4>
+                        <p class="text-gray-600 text-sm">Year</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-shadow">
+                        <i class="fas fa-certificate text-4xl text-accent mb-3"></i>
+                        <h4 class="font-semibold text-gray-900 mb-2">Research Methods Certification</h4>
+                        <p class="text-gray-600 text-sm">Year</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-shadow">
+                        <i class="fas fa-trophy text-4xl text-accent mb-3"></i>
+                        <h4 class="font-semibold text-gray-900 mb-2">Conference Best Paper</h4>
+                        <p class="text-gray-600 text-sm">Year</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Upload Section -->
+    <section id="cv-upload" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+                <div class="text-center mb-8">
+                    <div class="inline-flex items-center justify-center w-20 h-20 gradient-bg rounded-full mb-4">
+                        <i class="fas fa-file-upload text-white text-3xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-display font-bold text-gray-900 mb-4">Curriculum Vitae</h2>
+                    <p class="text-gray-600">
+                        Download my CV or upload your own for future reference
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Download CV -->
+                    <div class="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-accent transition-colors">
+                        <i class="fas fa-download text-4xl text-accent mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Download CV</h3>
+                        <p class="text-gray-600 mb-4">Get my latest curriculum vitae</p>
+                        <button class="gradient-bg text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all">
+                            Download PDF
+                        </button>
+                    </div>
+                    
+                    <!-- Upload CV -->
+                    <div class="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-accent transition-colors">
+                        <i class="fas fa-cloud-upload-alt text-4xl text-accent mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Upload CV</h3>
+                        <p class="text-gray-600 mb-4">Update with latest version</p>
+                        <label for="cv-file-input" class="cursor-pointer inline-block bg-gray-100 text-gray-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-all">
+                            Choose File
+                        </label>
+                        <input type="file" id="cv-file-input" accept=".pdf,.doc,.docx" class="hidden">
+                        <p class="text-xs text-gray-500 mt-2">PDF, DOC, or DOCX (Max 5MB)</p>
+                    </div>
+                </div>
+                
+                <div id="upload-message" class="mt-6 text-center text-sm"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-display font-bold text-gray-900 mb-4 inline-block section-title">Get In Touch</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mt-8">
+                    I'm always open to discussing research opportunities, collaborations, or just connecting
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Email</h4>
+                                <a href="mailto:your.email@university.edu" class="text-accent hover:underline">
+                                    reyadhussain.cse@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Location</h4>
+                                <p class="text-gray-600"> Kampar, Perak, Malaysia</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-building text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Office</h4>
+                                <p class="text-gray-600"> Hashimpur ,Chandanaish,Chittagong</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-semibold text-gray-900 mb-4">Connect with me</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://www.instagram.com/reyad_hu_ssain" target="_blank" rel="noopener noreferrer" 
+                               class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 hover:bg-accent hover:text-white transition-all">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/reyad-hossain-9667a8264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 hover:bg-accent hover:text-white transition-all">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="https://github.com/reyadhossainCSE" class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 hover:bg-accent hover:text-white transition-all">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 hover:bg-accent hover:text-white transition-all">
+                                <i class="fab fa-researchgate text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 hover:bg-accent hover:text-white transition-all">
+                                <i class="fas fa-graduation-cap text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" name="name" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-semibold text-gray-700 mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all"></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full gradient-bg text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </form>
+                    
+                    <div id="form-message" class="mt-4 text-center text-sm"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-display font-bold mb-4 gradient-text">Research Portfolio</h3>
+                    <p class="text-gray-400">
+                        Graduate Research Assistant dedicated to advancing knowledge through rigorous research and innovation.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors">Projects</a></li>
+                        <li><a href="#skills" class="text-gray-400 hover:text-white transition-colors">Skills</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Research Areas</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>• Machine learning</li>
+                        <li>• AI , NLP</li>
+                        <li>• Data Science</li>
+                        <li>• Health informatics</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2025 Research Portfolio. All rights reserved.
+                </p>
+                <p class="text-gray-500 text-sm mt-2">
+                    Built with passion for research and innovation
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" 
+            class="fixed bottom-8 right-8 w-12 h-12 gradient-bg text-white rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:shadow-xl transform hover:scale-110 z-40">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
